@@ -32,6 +32,8 @@ curl -I "http://195.168.2.7/?q=hello"
 Legitiman HTTP zahtjev prolazi bez ikakvih ograničenja te se normalno prosljeđuje prema WebGoat aplikaciji. 
 Ovo ponašanje je očekivano, ali u kombinaciji s prethodnim testovima pokazuje da sustav bez WAF-a ne razlikuje zlonamjerne i legitimne zahtjeve.
 
+---
+
 ## Testiranje s uključenim WAF-om
 Nakon ponovne aktivacije WAF-a (SecRuleEngine On), isti zahtjevi poslani su ponovno.
 <img width="1135" height="800" alt="image" src="https://github.com/user-attachments/assets/0c44dc61-a266-4620-8b03-39c4bca8025f" />
