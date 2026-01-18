@@ -18,7 +18,7 @@ Projekt uključuje teorijski dio (opis WAF-a, arhitektura, mehanizmi detekcije) 
 - ModSecurity
 - OWASP Core Rule Set (CRS)
 - OWASP WebGoat
-- OWASP ZAP
+- Curl
 - VirtualBox / VMware
 
 ---
