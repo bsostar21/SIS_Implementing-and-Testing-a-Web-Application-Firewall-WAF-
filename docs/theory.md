@@ -1,4 +1,5 @@
-1. Uvod
+## Teorija
+### Uvod
 
 Web aplikacije danas predstavljaju temeljnu komponentu informacijskih sustava u gotovo svim područjima poslovanja i svakodnevnog života. Korištenjem web tehnologija omogućena je dostupnost usluga u stvarnom vremenu, neovisno o lokaciji korisnika, što donosi brojne prednosti, ali istovremeno otvara i nove sigurnosne izazove. Kako su web aplikacije javno dostupne putem interneta, one postaju izložene velikom broju potencijalnih prijetnji i napada.
 
@@ -16,7 +17,7 @@ U ovom radu Web Application Firewall promatra se kao ključna komponenta sigurno
 
 ---
 
-2. Web Application Firewall (WAF)
+### Web Application Firewall (WAF)
 
 Web Application Firewall (WAF) predstavlja specijalizirani sigurnosni mehanizam namijenjen zaštiti web aplikacija od prijetnji koje djeluju na aplikacijskoj razini. Za razliku od tradicionalnih mrežnih vatrozida, koji filtriraju promet na temelju IP adresa, portova i protokola, WAF je usmjeren na analizu HTTP i HTTPS komunikacije te razumije strukturu i značenje web zahtjeva i odgovora.
 
@@ -32,7 +33,7 @@ Zbog svoje sposobnosti analize aplikacijskog prometa i fleksibilnosti u implemen
 
 ---
 
-3. Uloga WAF-a u zaštiti web aplikacija
+### Uloga WAF-a u zaštiti web aplikacija
 
 Web Application Firewall ima važnu ulogu u cjelokupnoj sigurnosnoj strategiji web aplikacija jer djeluje kao dodatni sloj obrane između korisnika i aplikacijskog sustava. Njegova osnovna zadaća nije zamjena postojećih sigurnosnih mehanizama ili sigurnog razvoja softvera, već nadopuna sigurnosne arhitekture s ciljem smanjenja rizika od uspješnih napada na aplikacijsku razinu.
 
@@ -50,7 +51,7 @@ Uloga Web Application Firewalla u zaštiti web aplikacija očituje se kroz pove�
 
 ---
 
-4. Arhitektura WAF-a
+### Arhitektura WAF-a
 
 Arhitektura Web Application Firewalla odnosi se na način na koji je WAF integriran u komunikacijski tok između korisnika i web aplikacije te na logičku strukturu obrade web prometa. WAF je pozicioniran tako da ima potpun uvid u HTTP i HTTPS komunikaciju, što mu omogućuje nadzor, analizu i kontrolu zahtjeva i odgovora na aplikacijskoj razini.
 
@@ -68,23 +69,23 @@ Prilikom dizajna arhitekture WAF-a važno je voditi računa o performansama i po
 
 ---
 
-5. Vrste WAF-ova
+### Vrste WAF-ova
 
 Web Application Firewalle moguće je klasificirati prema načinu implementacije i mjestu na kojem se nalaze u odnosu na web aplikaciju i infrastrukturu. Takva podjela omogućuje lakše razumijevanje razlika između pojedinih rješenja te olakšava odabir odgovarajućeg WAF-a ovisno o sigurnosnim zahtjevima, organizacijskoj strukturi i tehničkim ograničenjima.
 
-5.1. Mrežni (network-based) WAF
+#### Mrežni (network-based) WAF
 
 Mrežni WAF implementira se kao zaseban sigurnosni uređaj ili virtualna instanca koja se postavlja ispred web poslužitelja. Ovakav tip WAF-a obično djeluje kao centralna točka kroz koju prolazi sav web promet prema jednoj ili više aplikacija. Prednost mrežnog WAF-a je visoka razina kontrole i performansi, budući da je optimiziran isključivo za sigurnosne zadatke.
 
 Mrežni WAF-ovi često se koriste u većim organizacijama s vlastitom infrastrukturom, gdje postoji potreba za centraliziranom zaštitom više aplikacija. Međutim, njihova implementacija može zahtijevati dodatna ulaganja u hardver ili virtualne resurse te stručnost za održavanje i upravljanje.
 
-5.2. WAF temeljen na poslužitelju (host-based WAF)
+#### WAF temeljen na poslužitelju (host-based WAF)
 
 Host-based WAF instalira se izravno na web poslužitelj ili aplikacijski poslužitelj kao softverska komponenta ili modul. Takav WAF postaje dio postojećeg sustava i izravno se integrira s web poslužiteljem, što omogućuje detaljniji uvid u aplikacijski promet.
 
 Prednost ovog pristupa je fleksibilnost i niži troškovi implementacije u odnosu na mrežne WAF-ove. Također, host-based WAF može biti prikladan za manje sustave ili razvojna okruženja. S druge strane, ovakav tip WAF-a dijeli resurse s aplikacijom, što može utjecati na performanse te povećava složenost administracije na razini pojedinog poslužitelja.
 
-5.3. WAF u oblaku (cloud-based WAF)
+#### WAF u oblaku (cloud-based WAF)
 
 Cloud-based WAF pruža se kao usluga i nalazi se izvan lokalne infrastrukture organizacije. Sav web promet prema aplikaciji usmjerava se kroz infrastrukturu pružatelja usluge, gdje se provodi sigurnosna analiza i filtriranje. Ovakav pristup omogućuje brzu implementaciju i visoku skalabilnost, budući da se upravljanje infrastrukturom prebacuje na vanjskog pružatelja.
 
@@ -92,7 +93,7 @@ Prednost cloud-based WAF-a je jednostavnost korištenja i mogućnost prilagodbe 
 
 ---
 
-6. Glavne funkcionalnosti WAF-a
+### Glavne funkcionalnosti WAF-a
 
 Web Application Firewall pruža niz funkcionalnosti koje su usmjerene na zaštitu web aplikacija, nadzor prometa i povećanje ukupne sigurnosti sustava. Te funkcionalnosti omogućuju kontrolu komunikacije između korisnika i aplikacije te provedbu sigurnosnih politika na aplikacijskoj razini.
 
@@ -110,7 +111,7 @@ WAF može imati i zaštitnu ulogu u osiguravanju dostupnosti aplikacije. Praćen
 
 ---
 
-7. Mehanizmi detekcije napada
+### Mehanizmi detekcije napada
 
 Mehanizmi detekcije napada predstavljaju temeljni dio rada Web Application Firewalla jer omogućuju prepoznavanje zlonamjernih zahtjeva i sumnjivog ponašanja u web prometu. Za razliku od općih sigurnosnih mehanizama, WAF koristi pristupe prilagođene aplikacijskoj razini komunikacije, analizirajući sadržaj i kontekst HTTP/HTTPS zahtjeva.
 
@@ -126,7 +127,7 @@ U praksi se najčešće koristi kombinirani pristup, koji objedinjuje više meha
 
 ---
 
-8. Prednosti i ograničenja WAF-a
+### Prednosti i ograničenja WAF-a
 
 Web Application Firewall donosi brojne prednosti u zaštiti web aplikacija, ali istovremeno ima i određena ograničenja koja je potrebno uzeti u obzir prilikom njegove primjene. Razumijevanje obje strane ključno je za pravilno pozicioniranje WAF-a unutar sigurnosne arhitekture informacijskog sustava.
 
@@ -146,7 +147,7 @@ Dodatno ograničenje može predstavljati utjecaj na performanse sustava. Budući
 
 ---
 
-9. Vrste napada koje WAF sprječava
+### Vrste napada koje WAF sprječava
 
 Web Application Firewall osmišljen je za zaštitu web aplikacija od napada koji ciljaju ranjivosti na aplikacijskoj razini. Takvi napadi iskorištavaju način na koji aplikacija obrađuje korisnički unos, upravlja sesijama i komunicira s pozadinskim sustavima. WAF omogućuje prepoznavanje i blokiranje širokog spektra prijetnji koje se pojavljuju u stvarnim web okruženjima.
 
