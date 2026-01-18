@@ -1,11 +1,43 @@
-U praktičnom dijelu projekta implementirat će se i testirati Web Application Firewall (WAF) u kontroliranom virtualnom okruženju. Cilj ovog dijela projekta je analizirati učinkovitost WAF-a u detekciji i blokiranju web napada te procijeniti njegov utjecaj na sigurnost web aplikacije.
+## Praktični dio – implementacija i testiranje WAF-a
 
-Virtualno okruženje sastojat će se od dvije virtualne mašine. Na prvoj virtualnoj mašini bit će instalirana ranjiva web aplikacija OWASP WebGoat, koja će služiti kao simulacija stvarne web aplikacije izložene napadima. Druga virtualna mašina bit će konfigurirana kao zaštitni sloj te će na njoj biti instaliran Apache web poslužitelj s ModSecurity WAF-om, postavljenim u ulozi reverse proxyja ispred aplikacije.
+U praktičnom dijelu projekta implementira se i testira Web Application Firewall (WAF) u kontroliranom virtualnom okruženju. Cilj ovog dijela projekta je analizirati učinkovitost WAF-a u detekciji i blokiranju web napada te identificirati njegove prednosti i ograničenja u stvarnim uvjetima.
 
-Na WAF virtualnoj mašini instalirat će se OWASP Core Rule Set (CRS), koji sadrži unaprijed definirana sigurnosna pravila za prepoznavanje i blokiranje najčešćih vrsta web napada, poput SQL Injectiona, Cross-Site Scriptinga (XSS) i drugih poznatih prijetnji.
+### Postavljanje virtualnog okruženja
 
-Napadi na aplikaciju izvodit će se pomoću alata OWASP ZAP, koji omogućuje simulaciju stvarnih napada kroz automatizirane i ručne testove. Tijekom testiranja pratit će se ponašanje WAF-a, odnosno način na koji sustav reagira na zlonamjerne zahtjeve – koje zahtjeve blokira, a koje propušta prema aplikaciji.
+Testno okruženje sastoji se od dvije virtualne mašine postavljene pomoću alata za virtualizaciju kao što su **VirtualBox** ili **VMware**:
 
-Nakon provedenog testiranja izvršit će se analiza prikupljenih podataka, s posebnim naglaskom na identifikaciju false positive i false negative detekcija. Na temelju dobivenih rezultata provest će se prilagodba i optimizacija sigurnosnih pravila s ciljem povećanja preciznosti i učinkovitosti WAF-a.
+- **Virtualna mašina s web aplikacijom**  
+  Na ovoj virtualnoj mašini instalirana je ranjiva web aplikacija **OWASP WebGoat**, koja služi kao simulacija stvarne web aplikacije s poznatim sigurnosnim ranjivostima.
 
-Na kraju projekta rezultati analize bit će sustavno prikazani kroz tablične i grafičke prikaze, uz popratnu dokumentaciju i zaključke o učinkovitosti implementiranog WAF rješenja.
+- **Virtualna mašina s WAF-om**  
+  Druga virtualna mašina konfigurirana je kao zaštitni sloj ispred aplikacije. Na njoj je instaliran **Apache HTTP Server s ModSecurity WAF-om**, koji je postavljen u ulozi **reverse proxyja** i analizira sav dolazni HTTP promet.
+
+### Konfiguracija WAF-a
+
+Na virtualnoj mašini s WAF-om instaliran je i aktiviran **OWASP Core Rule Set (CRS)**. CRS sadrži unaprijed definirana sigurnosna pravila namijenjena prepoznavanju i blokiranju najčešćih vrsta web napada, uključujući:
+
+- SQL Injection (SQLi)
+- Cross-Site Scripting (XSS)
+- Command Injection
+- Path Traversal i druge web napade
+
+ModSecurity je konfiguriran u **aktivnom (blocking) načinu rada**, što znači da se zlonamjerni zahtjevi automatski blokiraju, a ne samo bilježe u zapisnike.
+
+### Simulacija napada
+
+Za testiranje učinkovitosti WAF-a koriste se napadi simulirani pomoću alata **OWASP ZAP (Zed Attack Proxy)**. Izvode se automatizirani sigurnosni skenovi, kao i ručni pokušaji napada, kako bi se što vjernije simulirali stvarni napadi na web aplikaciju.
+
+### Praćenje i analiza
+
+Tijekom testiranja prikupljaju se zapisi (logovi) WAF-a i analiziraju se reakcije sustava na dolazne zahtjeve. Analiza uključuje:
+
+- identifikaciju zahtjeva koje je WAF uspješno blokirao
+- identifikaciju zahtjeva koje je WAF propustio prema aplikaciji
+- prepoznavanje **false positive** slučajeva, gdje su legitimni zahtjevi pogrešno blokirani
+- prepoznavanje **false negative** slučajeva, gdje zlonamjerni zahtjevi nisu prepoznati
+
+Na temelju dobivenih rezultata provodi se prilagodba i optimizacija sigurnosnih pravila s ciljem povećanja preciznosti WAF-a, uz zadržavanje funkcionalnosti aplikacije.
+
+### Rezultati i dokumentacija
+
+Rezultati testiranja prikazuju se pomoću **tablica i grafičkih prikaza**, koji omogućuju jasan uvid u ponašanje i učinkovitost WAF-a prije i nakon optimizacije pravila. Sva konfiguracija, testni scenariji, zapisi i rezultati dokumentirani su unutar **GitHub repozitorija**, čime se osigurava transparentnost, ponovljivost i kvaliteta projekta.
