@@ -18,6 +18,8 @@ Po završetku instalacije provjereno je uspješno pokretanje aplikacije VirtualB
 
 VirtualBox je zatim korišten za kreiranje i upravljanje virtualnim mašinama koje čine arhitekturu sustava, uključujući konfiguraciju mreže, dodjelu resursa te pokretanje testnog okruženja.
 
+---
+
 ## Mrežna konfiguracija
 
 Kako bi se omogućila komunikacija između virtualnih mašina, a istovremeno zadržala izolacija od vanjske mreže, u VirtualBoxu je konfigurirana **NAT Network** mreža. Ovakav tip mreže omogućuje svim virtualnim mašinama međusobnu komunikaciju unutar istog subnet-a, kao i pristup internetu prema potrebi.
@@ -60,7 +62,10 @@ Ovakva mrežna konfiguracija omogućuje sljedeće:
 - Sav promet prolazi kroz WAF, što omogućuje analizu i filtriranje zahtjeva
 - Cijelo okruženje ostaje izolirano od vanjske mreže
 
+
 Time je uspostavljena stabilna i kontrolirana mrežna infrastruktura koja predstavlja temelj za daljnju implementaciju, testiranje i analizu ponašanja Web Application Firewalla.
+
+---
 
 ## WebGoat – instalacija i pokretanje ranjive web aplikacije
 
@@ -106,6 +111,8 @@ Slika 3. WebGoat u pregledniku
 <br>
 <br>
 Uspješnim učitavanjem WebGoat početne stranice potvrđeno je da je aplikacija ispravno instalirana i dostupna unutar virtualne mreže. Time je WebGoat VM spreman za daljnje korake testiranja i integraciju s WAF virtualnom mašinom.
+
+---
 
 ## WAF – instalacija, konfiguracija i testiranje
 
