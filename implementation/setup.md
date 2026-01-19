@@ -18,6 +18,16 @@ Po završetku instalacije provjereno je uspješno pokretanje aplikacije VirtualB
 
 VirtualBox je zatim korišten za kreiranje i upravljanje virtualnim mašinama koje čine arhitekturu sustava, uključujući konfiguraciju mreže, dodjelu resursa te pokretanje testnog okruženja.
 
+Korištene virtualne mašine:
+- WebGoat VM (Ubuntu Linux) – ranjiva web aplikacija OWASP WebGoat  
+  https://ubuntu.com/download/alternative-downloads
+
+- WAF VM (Ubuntu Linux) – Apache + ModSecurity + OWASP Core Rule Set  
+  https://ubuntu.com/download/alternative-downloads
+
+- Attack VM (Kali Linux) – simulacija napada (curl)  
+  https://www.kali.org/get-kali/#kali-virtual-machines
+  
 ---
 
 ## Mrežna konfiguracija
